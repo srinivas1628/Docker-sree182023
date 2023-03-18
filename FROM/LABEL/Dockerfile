@@ -1,0 +1,6 @@
+FROM almalinux
+LABEL AUTHOR="SREENIVAS" \
+      COURSE="DOCKER" \
+      DURATION="25HRS"
+
+      
