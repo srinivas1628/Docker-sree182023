@@ -1,0 +1,5 @@
+FROM almalinux
+ENV AUTHOR="SRINIVAS" \
+    DURATION="30HRS" \
+    COURSE="DOCKER"
+    
