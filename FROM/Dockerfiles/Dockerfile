@@ -13,5 +13,5 @@ ENV DEBUG_LVL 4
 USER srinivas
 WORKDIR /opt
 EXPOSE 22
-CMD["/bin/bash"]
+CMD ["/bin/bash"]
 
