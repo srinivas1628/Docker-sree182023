@@ -1,9 +1,18 @@
-FROM centos
-RUN yum install java-1.8.0-openjdk unzip wget -y 
-RUN mkdir /usr/local/tomcat
-ADD https://apache.cs.utah.edu/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz /usr/local/tomcat
-WORKDIR /usr/local/tomact/
-RUN tar -xvzf apache-tomcat-8.5.57.tar.gz
-RUN ln -s  /usr/local/tomcat/apache-tomcat-8.5.57/bin/startup.sh /usr/local/bin/startup
-EXPOSE 8080
-CMD ["cd /usr/local/bin/startup"] //this ins not working
+FROM scratch
+MAINTAINER SRINIVAS <sree.garikiparthy@gamil.com>
+LABEL version="1.0.0"\
+      release=date="2017-10-06"\
+      owner="Devops Team"
+ADD centos-07-docker.tar.xz /
+COPY index.html /opt
+ADD sample.tar /opt
+ADD https://en.wikipedia.org/wiki/Water /opt
+RUN useradd srinivas
+ENV APACHE_LOG_DIR=/var/log
+ENV DEBUG_LVL 4
+USER ravdy
+WORKDIR /opt
+EXPOSE 22
+CMD["/bin/bash"]
+
+
