@@ -10,9 +10,8 @@ ADD https://en.wikipedia.org/wiki/Water /opt
 RUN useradd srinivas
 ENV APACHE_LOG_DIR=/var/log
 ENV DEBUG_LVL 4
-USER ravdy
+USER srinivas
 WORKDIR /opt
 EXPOSE 22
 CMD["/bin/bash"]
-
 
